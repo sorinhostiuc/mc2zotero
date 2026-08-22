@@ -1,0 +1,8 @@
+_debug/
+.claude/
+*.xpi
+*.docx
+update.json
+pp2zotero-*
+mc2zotero-specifications-v2.md
+.DS_Store

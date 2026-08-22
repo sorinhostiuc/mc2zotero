@@ -1,0 +1,16 @@
+{
+  "name": "mc2zotero",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Convert Mendeley Cite citations in Word documents to Zotero citations",
+  "author": "Sorin Hostiuc",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mapispev/mc2zotero.git"
+  },
+  "scripts": {
+    "build": "bash build.sh",
+    "build:windows": "powershell -NoProfile -ExecutionPolicy Bypass -File build.ps1"
+  }
+}
