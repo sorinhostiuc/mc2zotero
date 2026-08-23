@@ -1,25 +1,41 @@
-# MC2Zotero
+# Mendeley Cite to Zotero
 
-MC2Zotero converts Mendeley Cite content controls in Microsoft Word `.docx` files into Zotero citation fields. The converted document can then be edited and refreshed with the Zotero Word plugin.
+Mendeley Cite to Zotero converts live Mendeley Cite citations in a Word `.docx` manuscript into editable Zotero citations.
 
-## Before conversion
+![Mendeley Cite to Zotero conversion window](docs/images/mendeley-cite-zotero.png)
 
-Import the Mendeley library into Zotero first. In Zotero, use `File > Import` and select the Mendeley option. Better matches are possible when the imported items retain their DOI values and Mendeley identifiers.
+## What it does
+
+- Scans Mendeley Cite fields in a Word document.
+- Matches references in your Zotero library by DOI and normalized title.
+- Can import a missing item by DOI through Crossref.
+- Produces a separate converted document and preserves the source file.
+- Supports Word field codes, bookmarks, and ODF Reference Marks.
+- Applies the selected citation style when Zotero first refreshes the document.
+
+## Using the converter
+
+1. Open the converter from Zotero's **Tools** menu.
+2. Select the Mendeley Cite `.docx` file.
+3. Choose the output mode and review reference matches.
+4. Convert the document.
+5. Open the new file and run Zotero **Refresh**.
 
 ## Installation
 
-Download `mc2zotero-1.0.1.xpi` from the latest release. Open `Tools > Plugins` in Zotero, choose `Install Add-on From File`, and select the XPI. The current release supports Zotero 7, 8, and 9.
+1. Download the latest `.xpi` from [Releases](https://github.com/sorinhostiuc/mc2zotero/releases/latest).
+2. In Zotero, open **Tools > Plugins**.
+3. Choose **Install Plugin From File**, select the `.xpi`, and restart Zotero if asked.
 
-## Converting a document
+The plugin supports Zotero 7 through 9.
 
-Open `Tools > Convert Mendeley Cite Citations...`, select the `.docx` document, and review the detected references. During conversion, MC2Zotero reads the Mendeley content controls embedded in the Word package, identifies each cited record by its Mendeley identifier when that value is available, falls back to the DOI or normalized title and year, and can create a missing Zotero item from the metadata retained in the document.
+## Development
 
-After conversion, open the output file in Word and select `Refresh` from the Zotero toolbar. Check any unresolved citations before continuing work on the document.
-
-## Building from source
-
-On Windows, run `npm run build:windows`. On Unix-like systems, run `npm run build`. The XPI is written to the repository root.
+```bash
+npm ci
+npm run build
+```
 
 ## License
 
-MC2Zotero is released under the MIT License. See [LICENSE](LICENSE).
+[MIT](LICENSE)
