@@ -1,6 +1,6 @@
 {
   "name": "mc2zotero",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "description": "Convert Mendeley Cite citations in Word documents to Zotero citations",
   "author": "Sorin Hostiuc",
